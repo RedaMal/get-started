@@ -6,9 +6,9 @@ import numpy as np
 
 #Input data
 
-path = r'C:\Users\redam\OneDrive\Desktop\Python with Reda\Raw data\Example file CV.txt' #data file location 
+path = r'C:paste the path here\Example file CV.txt' #data file location, copy the path from your device and paste 
 
-data = pd.read_csv(path, sep='\t') #here we use a function to open the data file 
+data = pd.read_csv(path, sep='\t') #here we use pandas function to open the data file 
 
 print(data.head())
 
@@ -17,7 +17,7 @@ print(data.head())
 data['time, min'] = data['time/s']/60 #convert sec to hours
 print(data.head())
 
-#Data vizualization and saving the plot
+#Data vizualization, making a CV graph 
 
 fig, ax = plt.subplots()
 ax.plot(data['Ecell/V'],data['<I>/mA']) #provide x and y arguments
